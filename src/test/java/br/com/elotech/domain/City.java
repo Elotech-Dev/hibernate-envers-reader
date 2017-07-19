@@ -3,12 +3,15 @@ package br.com.elotech.domain;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import br.com.elotech.hibernate.envers.EntityId;
+import org.hibernate.envers.Audited;
+
+import br.com.elotech.hibernate.envers.RevisionEntity;
 import lombok.Data;
 
 @Entity
 @Data
-public class City implements EntityId<Long> {
+@Audited
+public class City implements RevisionEntity<Long> {
 
     @Id
     private Long id;

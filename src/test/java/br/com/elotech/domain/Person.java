@@ -1,26 +1,25 @@
 package br.com.elotech.domain;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
+import javax.persistence.ManyToOne;
 
 import org.hibernate.envers.Audited;
 
-import br.com.elotech.hibernate.envers.EntityId;
+import br.com.elotech.hibernate.envers.RevisionEntity;
 import lombok.Data;
 
 @Data
 @Entity
 @Audited
-public class Person implements EntityId<Long> {
+public class Person implements RevisionEntity<Long> {
 
-    @Id
-    @SequenceGenerator(allocationSize = 1, name = "seq_person")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_person")
-    private Long id;
+	@Id
+	private Long id;
 
-    private String name;
+	private String name;
+
+	@ManyToOne
+	private City city;
 
 }
