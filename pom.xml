@@ -3,12 +3,34 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>br.com.elotech</groupId>
-	<artifactId>hibernate.envers</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>hibernate-envers-reader</artifactId>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>hibernate.envers</name>
-	<url>http://maven.apache.org</url>
+	<name>hibernate-envers-reader</name>
+	<inceptionYear>2017</inceptionYear>
+	<description>Abstraction for reader of hibernate envers. </description>
+	<url>https://github.com/Elotech-Dev/hibernate-envers-reader </url>
+
+	<licenses>
+		<license>
+		<name>MIT</name>
+			<url>http://opensource.org/licenses/MIT</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>PDI - ELOTECH</name>
+		</developer>
+	</developers>
+
+	<scm>
+		<url>https://github.com/Elotech-Dev/hibernate-envers-reader/</url>
+		<connection>scm:git:git://github.com/Elotech-Dev/hibernate-envers-reader.git</connection>
+		<developerConnection>scm:git:ssh://github.com/Elotech-Dev/hibernate-envers-reader.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -51,4 +73,25 @@
 		</dependency>
 
 	</dependencies>
+	
+	
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>	
+	<ciManagement>
+		<system>travis</system>
+		<url>https://travis-ci.org/Elotech-Dev/hibernate-envers-reader</url>
+	</ciManagement>
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/Elotech-Dev/hibernate-envers-reader/issues</url>
+	</issueManagement>	
+	
 </project>
