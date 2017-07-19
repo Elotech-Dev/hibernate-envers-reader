@@ -22,7 +22,7 @@ public class RevisionReader {
         this.em = em;
     }
 
-    private <U extends Serializable, T extends EntityId<U>> List<RevisionRecord<T>> createListRevisionRecord(
+    private <U extends Serializable, T extends RevisionEntity<U>> List<RevisionRecord<T>> createListRevisionRecord(
             List<?> history) {
         List<RevisionRecord<T>> listHistory = new ArrayList<>();
 
@@ -48,7 +48,7 @@ public class RevisionReader {
         return listHistory;
     }
 
-    private <U extends Serializable, T extends EntityId<U>> void validAudited(AuditReader reader, Class<T> clazz) {
+    private <U extends Serializable, T extends RevisionEntity<U>> void validAudited(AuditReader reader, Class<T> clazz) {
 
         if (!reader.isEntityClassAudited(clazz)) {
 
@@ -56,7 +56,7 @@ public class RevisionReader {
         }
     }
 
-    public <U extends Serializable, T extends EntityId<U>> List<RevisionRecord<T>>
+    public <U extends Serializable, T extends RevisionEntity<U>> List<RevisionRecord<T>>
             findHistory(Class<T> clazz, U key) {
 
         AuditReader reader = AuditReaderFactory.get(em);
@@ -73,7 +73,7 @@ public class RevisionReader {
 
     }
 
-    public <U extends Serializable, T extends EntityId<U>> List<RevisionRecord<T>> findDeletes(Class<T> clazz) {
+    public <U extends Serializable, T extends RevisionEntity<U>> List<RevisionRecord<T>> findDeletes(Class<T> clazz) {
 
         AuditReader reader = AuditReaderFactory.get(em);
 

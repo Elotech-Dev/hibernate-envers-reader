@@ -14,8 +14,8 @@ import org.hibernate.envers.RevisionEntity;
 import org.hibernate.envers.RevisionNumber;
 import org.hibernate.envers.RevisionTimestamp;
 
+import br.com.elotech.hibernate.envers.EnversListener;
 import br.com.elotech.hibernate.envers.RevisionEnvers;
-import br.com.elotech.jpa.EnversListener;
 import lombok.ToString;
 
 @RevisionEntity(value = EnversListener.class)
