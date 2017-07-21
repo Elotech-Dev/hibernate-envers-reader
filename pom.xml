@@ -3,7 +3,7 @@
 
 	<groupId>br.com.elotech</groupId>
 	<artifactId>hibernate-envers-reader</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>hibernate-envers-reader</name>
@@ -26,9 +26,8 @@
 
 	<scm>
 		<url>https://github.com/Elotech-Dev/hibernate-envers-reader/</url>
-		<connection>scm:git:https://github.com/Elotech-Dev/hibernate-envers-reader.git</connection>
-		<developerConnection>scm:git:ssh://github.com/Elotech-Dev/hibernate-envers-reader.git</developerConnection>
-		<tag>hibernate-envers-reader-0.0.1</tag>
+		<connection>scm:git:git://github.com/Elotech-Dev/hibernate-envers-reader.git</connection>
+		<developerConnection>scm:git:git@github.com:Elotech-Dev/hibernate-envers-reader.git</developerConnection>
 	</scm>
 
 	<properties>
