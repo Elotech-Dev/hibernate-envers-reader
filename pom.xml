@@ -28,7 +28,7 @@
 		<url>https://github.com/Elotech-Dev/hibernate-envers-reader/</url>
 		<connection>scm:git:https://github.com/Elotech-Dev/hibernate-envers-reader.git</connection>
 		<developerConnection>scm:git:ssh://github.com/Elotech-Dev/hibernate-envers-reader.git</developerConnection>
-		<tag>hibernate-envers-reader-0.0.1</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<properties>
