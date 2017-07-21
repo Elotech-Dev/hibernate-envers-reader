@@ -1,4 +1,4 @@
-package br.com.elotech.jpa;
+package br.com.elotech.hibernate.envers;
 
 import org.hibernate.envers.RevisionListener;
 
